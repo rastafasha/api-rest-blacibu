@@ -2,15 +2,14 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\Admin as Authenticatable;
 
 class Admin extends Model
 {
-
     use Notifiable;
 
     protected $table = 'administradores';
@@ -78,5 +77,4 @@ class Admin extends Model
     public function recertconferencias(){
         return $this->hasMany('App\RecertConferencia');
     }
-
 }

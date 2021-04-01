@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class RecertConferencia extends Model
 {
-    protected $table = 'recert_conf_afiliaciones';
+    protected $table = 'recert_conferencias';
 
     protected $fillable = [
-        'user_id', 'tiporegistro_id',
+        'user_id', 
+        'tiporegistro_id',
         'conf_nac_inter_titulo',
         'conf_nac_inter_evento',
         'conf_nac_inter_pdf',

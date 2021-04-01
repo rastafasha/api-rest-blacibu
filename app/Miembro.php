@@ -9,7 +9,12 @@ class Miembro extends Model
     protected $table = 'miembros';
 
     protected $fillable = [
-        'tiporegistro_id', 'numero_miembro', 'ano_certificacion', 'tiempo_titulado', 'ano_graduado'
+        'user_id', 
+        'tiporegistro_id', 
+        'numero_miembro', 
+        'ano_certificacion', 
+        'tiempo_titulado', 
+        'ano_graduado'
     ];
 
     // Relacion de 1 a muchos pero inversa(muchos pueden pertenecer a una categoria )
@@ -23,5 +28,4 @@ class Miembro extends Model
     public function tiporegistros(){
         return $this->belongsTo('App\TipoRegistro', 'tiporegistro_id');
     }
-
 }

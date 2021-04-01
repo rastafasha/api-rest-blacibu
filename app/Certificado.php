@@ -2,13 +2,10 @@
 
 namespace App;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class Certificado extends Model
 {
-
-
     protected $table = 'certificados';
 
     protected $fillable = [
@@ -52,5 +49,4 @@ class Certificado extends Model
     public function admin(){
         return $this->belongsTo('App\Admin', 'user_id');
     }
-
 }

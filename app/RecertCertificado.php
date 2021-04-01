@@ -2,15 +2,14 @@
 
 namespace App;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class RecertCertificado extends Model
 {
-
     protected $table = 'recert_certificados';
 
     protected $fillable = [
+        'user_id', 
         'tiporegistro_id', 
         'cert_act_academicas_y_asistenciales_nombre',
          'cert_act_academicas_y_asistenciales_cargo', 

@@ -2,14 +2,11 @@
 
 namespace App;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class ConferenciasyTrabajos extends Model
 {
-
-
-    protected $table = 'conferencia_y_trabajos';
+    protected $table = 'conferencias_y_trabajos';
 
     protected $fillable = [
         'tiporegistro_id', 

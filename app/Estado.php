@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Estado extends Model
 {
-    protected $table = 'status';
+    protected $table = 'estados';
 
     protected $fillable = [
-        'name', 'color', 'icon',
+        'name', 
+        'color', 
+        'icon',
     ];
 
 
@@ -55,6 +57,5 @@ public function admin(){
 public function userpost(){
     return $this->belongsTo('App\UserPost', 'status_id');
 }
-
 
 }

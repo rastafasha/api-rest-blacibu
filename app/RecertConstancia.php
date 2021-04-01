@@ -2,16 +2,14 @@
 
 namespace App;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class RecertConstancia extends Model
 {
-
-
     protected $table = 'recert_constancias';
 
     protected $fillable = [
+        'user_id',
         'tiporegistro_id',
         'const_miembro_activo_pdf',
         'const_miembro_activo_status_id', 

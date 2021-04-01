@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pago extends Model
 {
-
     protected $table = 'pagos';
 
     public $incrementing = false;
@@ -28,6 +27,4 @@ class Pago extends Model
     public function tiporegistros(){
         return $this->belongsTo('App\TipoRegistro', 'tiporegistro_id');
     }
-
-
 }

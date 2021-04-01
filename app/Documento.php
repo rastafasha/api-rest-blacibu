@@ -13,7 +13,8 @@ class Documento extends Model
     protected $guarded = [];
 
     protected $fillable = [
-        'tiporegistro_id', 'pdf_titulo_odontologo',
+        'tiporegistro_id', 
+        'pdf_titulo_odontologo',
         'pdf_titulo_odontologo_status_id',
         'pdf_matricula_odontologo',
         'pdf_matricula_odontologo_status_id',
@@ -38,7 +39,4 @@ class Documento extends Model
     public function tiporegistros(){
         return $this->belongsTo('App\TipoRegistro', 'tiporegistro_id');
     }
-
-
-
 }

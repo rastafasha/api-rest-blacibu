@@ -2,15 +2,17 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-// JWT contract
-use Tymon\JWTAuth\Contracts\JWTSubject;
 
 
-class User extends Authenticatable implements JWTSubject {
+class User extends Authenticatable
+{
+    //
     use Notifiable;
 
     /**
@@ -19,10 +21,27 @@ class User extends Authenticatable implements JWTSubject {
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'surname', 'tiporegistro_id', 'idioma',
-        'pais', 'pasaporte', 'fecha_nac', 'edad', 'lugar_nac', 'nacionalidad',
-        'telefono', 'direccion', 'cod_postal', 'pais_ejerce',
-        'red_social', 'user_red', 'status_id', 'image', 'user_post_id'
+        'name', 
+        'email', 
+        'password', 
+        'surname', 
+        'tiporegistro_id', 
+        'idioma',
+        'pais', 
+        'pasaporte', 
+        'fecha_nac', 
+        'edad', 
+        'lugar_nac', 
+        'nacionalidad',
+        'telefono', 
+        'direccion', 
+        'cod_postal', 
+        'pais_ejerce',
+        'red_social', 
+        'user_red', 
+        'status_id', 
+        'image', 
+        'user_post_id'
     ];
 
     /**
@@ -118,9 +137,7 @@ class User extends Authenticatable implements JWTSubject {
         return $this->hasMany('App\UserPost', 'user_post_id');
     }
 
+    
 
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class)->withTimestamps();
-    }
+
 }
